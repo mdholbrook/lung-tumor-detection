@@ -1,0 +1,10 @@
+FROM tensorflow/tensorflow:1.14.0-gpu-py3
+
+WORKDIR /home/app
+
+ADD . /home/app
+
+RUN pip install -r requirements.txt
+
+ENV NAME lungdl
+

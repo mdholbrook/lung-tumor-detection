@@ -1,0 +1,12 @@
+data_*
+__pycache__
+tmp*
+cxx/build
+sftp-config.json
+=======
+.vscode
+data
+tmp
+venv
+.idea
+logs

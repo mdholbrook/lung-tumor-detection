@@ -1,0 +1,13 @@
+ipython
+jupyter
+tqdm
+#numpy
+scipy
+scikit-learn
+scikit-image
+glob2
+nibabel
+SimpleITK
+tensorflow-gpu==1.14
+matplotlib
+seaborn

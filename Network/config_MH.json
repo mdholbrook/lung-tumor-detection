@@ -1,0 +1,58 @@
+{
+    "ProjectName": "VNet Tensorflow",
+    "ProjectDetail": {
+        "BodyPart": "Lung",
+        "Diseases": "Lesion"
+    },    
+    "TrainingSetting": {
+        "Data": {
+            "TrainingDataDirectory":"./data/training",
+            "TestingDataDirectory": "./data/testing",
+            "ImageFilenames": ["image.nii"],
+            "LabelFilename": "label.nii"
+        },
+        "Restore": false,
+        "SegmentationClasses": [0,1],
+        "LogDir": "./tmp/log",
+        "CheckpointDir": "./tmp/ckpt",
+        "BatchSize": 6,
+        "PatchShape": [96,96,96],
+        "ImageLog": false,
+        "Testing": true,
+        "TestStep": 10,
+        "Epoches": 3500,
+        "MaxIterations": 10000,
+        "LogInterval": 50,
+        "Networks": {
+            "Name":"VNet",
+            "Dropout": 0.01
+        },
+        "Loss": "sorensen",
+        "Optimizer":{
+            "Name": "Adam",
+            "InitialLearningRate": 1e-2,
+            "Momentum":0.9,
+            "Decay":{
+                "Factor": 0.99,
+                "Steps": 100
+            }
+        },
+        "Spacing": [0.125,0.125, 0.125],
+        "DropRatio": 0.01,
+        "MinPixel":30
+    },
+    "EvaluationSetting":{
+        "Data":{
+            "EvaluateDataDirectory": "./data/evaluate3",
+            "ImageFilenames": ["image.nii"],
+            "LabelFilename": "label_tf.nii.gz",
+            "ProbabilityFilename": "probability_tf.nii.gz"
+        },
+        "CheckpointPath": "./tmp/ckpt/checkpoint-10000",
+        "Stride": [12,12,12],
+        "BatchSize": 8,
+        "ProbabilityOutput":true,
+	"LargestConnectedComponent":false,
+	"VolumeThreshold":0
+    }
+}
