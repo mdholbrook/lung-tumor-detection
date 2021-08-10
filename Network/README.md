@@ -19,7 +19,7 @@ To run batches, such as for k-folds, the files named `kfold*.py` set up the trai
 ### Visual Representation of Network
 
 Here is an example graph of network this code implements. Channel depth may change owning to change in modality number and class number.
-![VNetDiagram](VNetDiagram.png)
+![VNetDiagram](.github/VNetDiagram.png)
 
 ### Features
 
