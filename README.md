@@ -1,6 +1,6 @@
 ![image](.github/banner.png)
 
-# Lung Tumor Detection for the Duke Quantitative Image and Analsysis Lab (QIAL) U24 Precinical Trail
+# Lung Tumor Detection for the Duke Quantitative Image and Analysis Lab (QIAL) U24 Preclinical Trial
 
 This repository contains methods for training a V-net to detect lung nodules in micro-CT images of mice. The purpose of this project is to create tools which may be used in computer aided diagnosis (CAD) of scans performed in the preclinical arm of a co-clinical trial.
 
@@ -29,7 +29,7 @@ To cite this repository please use the following BibTex fields:
 ```
 @misc{Holbrook-lung-tumor-detection,
   author = {Holbrook, Matthew D.},
-  title = {Lung Tumor Detection for the Duke Quantitative Image and Analsysis Lab (QIAL) U24 Precinical Trail},
+  title = {Lung Tumor Detection for the Duke Quantitative Image and Analysis Lab (QIAL) U24 Preclinical Trial},
   howpublished = {\url{https://github.com/mdholbrook/lung-tumor-detection}},
   year = {2021},
   publisher={Github},
